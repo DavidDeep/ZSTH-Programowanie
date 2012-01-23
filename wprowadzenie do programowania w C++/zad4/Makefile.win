@@ -1,0 +1,34 @@
+# Project: Projekt1
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ wxDev-C++ IDE 7.4.0.86 on 05/12/11 19:52
+
+WXLIBNAME = wxmsw28
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/main.o
+LINKOBJ   = "Objects/MingW/main.o"
+LIBS      = -L"D:/Program Files/Dev-Cpp/Lib"  
+INCS      = -I"D:/Program Files/Dev-Cpp/Include"
+CXXINCS   = -I"D:/Program Files/Dev-Cpp/lib/gcc/mingw32/3.4.5/include" -I"D:/Program Files/Dev-Cpp/include/c++/3.4.5/backward" -I"D:/Program Files/Dev-Cpp/include/c++/3.4.5/mingw32" -I"D:/Program Files/Dev-Cpp/include/c++/3.4.5" -I"D:/Program Files/Dev-Cpp/include" -I"D:/Program Files/Dev-Cpp/" -I"D:/Program Files/Dev-Cpp/include/3rdparty/wx/plotctrl" -I"D:/Program Files/Dev-Cpp/include/3rdparty/wx/sheet" -I"D:/Program Files/Dev-Cpp/include/3rdparty/wx/treemultictrl" -I"D:/Program Files/Dev-Cpp/include/3rdparty/wx/things" -I"D:/Program Files/Dev-Cpp/include/3rdparty/wx" -I"D:/Program Files/Dev-Cpp/include/3rdparty" -I"D:/Program Files/Dev-Cpp/include/common/wx/msw" -I"D:/Program Files/Dev-Cpp/include/common/wx/generic" -I"D:/Program Files/Dev-Cpp/include/common/wx/fl" -I"D:/Program Files/Dev-Cpp/include/common/wx/gizmos" -I"D:/Program Files/Dev-Cpp/include/common/wx/html" -I"D:/Program Files/Dev-Cpp/include/common/wx/mmedia" -I"D:/Program Files/Dev-Cpp/include/common/wx/net" -I"D:/Program Files/Dev-Cpp/include/common/wx/ogl" -I"D:/Program Files/Dev-Cpp/include/common/wx/plot" -I"D:/Program Files/Dev-Cpp/include/common/wx/protocol" -I"D:/Program Files/Dev-Cpp/include/common/wx/stc" -I"D:/Program Files/Dev-Cpp/include/common/wx/svg" -I"D:/Program Files/Dev-Cpp/include/common/wx/xml" -I"D:/Program Files/Dev-Cpp/include/common/wx/xrc" -I"D:/Program Files/Dev-Cpp/include/common/wx" -I"D:/Program Files/Dev-Cpp/include/common"
+RCINCS    = --include-dir "D:/PROGRA~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/Zadanie 4.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)  
+CFLAGS    = $(INCS) $(DEFINES)  
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(LINKOBJ) "$(BIN)"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/main.o: $(GLOBALDEPS) main.cpp
+	$(CPP) -c main.cpp -o Objects/MingW/main.o $(CXXFLAGS)
